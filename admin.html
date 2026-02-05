@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin | Erika Turvey Gallery</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1>Gallery Admin</h1>
+    <nav>
+      <a href="index.html">← Back to Gallery</a>
+    </nav>
+  </div>
+</header>
+
+<section class="container admin">
+
+  <h3>Gallery Settings</h3>
+  <input id="email" placeholder="Email address"/>
+  <input id="whatsapp" placeholder="WhatsApp number (+27...)"/>
+  <button onclick="saveSettings()">Save Settings</button>
+
+  <hr/>
+
+  <h3>Add New Artwork</h3>
+
+  <div id="dropzone">Drag & drop image here or click to select</div>
+  <input type="file" id="fileInput" hidden accept="image/*"/>
+
+  <input id="title" placeholder="Artwork title"/>
+  <input id="size" placeholder="Size (e.g. 80cm x 60cm)"/>
+  <input id="price" placeholder="Price (e.g. R4500)"/>
+  <textarea id="description" placeholder="Artwork description"></textarea>
+
+  <select id="status">
+    <option value="available">Available</option>
+    <option value="sold">Sold</option>
+  </select>
+
+  <button onclick="addArtwork()">Publish Artwork</button>
+
+  <h3>Existing Artworks</h3>
+  <div id="adminList"></div>
+
+</section>
+
+<script src="assets/admin.js"></script>
+</body>
+</html>
