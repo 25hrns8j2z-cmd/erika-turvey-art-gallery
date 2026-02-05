@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Erika Turvey | Art Gallery & Studio</title>
+  <meta name="description" content="Erika Turvey Art Gallery & Studio – original artworks and studio pieces."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1>Erika Turvey</h1>
+    <p class="subtitle">Art Gallery & Studio</p>
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>Original Art. Timeless Expression.</h2>
+    <p>Browse available artworks and enquire directly about any piece.</p>
+  </div>
+</section>
+
+<section id="gallery" class="container gallery">
+  <h3>Gallery</h3>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search artworks..." />
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="available">Available</option>
+      <option value="sold">Sold</option>
+    </select>
+  </div>
+
+  <div id="artGrid" class="art-grid"></div>
+  <p id="emptyMessage" class="empty">No artworks available yet.</p>
+</section>
+
+<section id="about" class="container about">
+  <h3>About the Studio</h3>
+  <p>
+    This gallery showcases original artworks by Erika Turvey.
+    Each piece is carefully created in the studio and available for private enquiry.
+  </p>
+</section>
+
+<section id="contact" class="container contact">
+  <h3>Contact</h3>
+  <p>For commissions or general enquiries:</p>
+  <a id="emailLink" class="button">Email</a>
+  <a id="whatsappLink" class="button" target="_blank">WhatsApp</a>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Erika Turvey Art Gallery & Studio</p>
+</footer>
+
+<!-- ENQUIRY MODAL -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalInfo"></p>
+
+    <textarea id="enquiryMessage" placeholder="Write your enquiry here..."></textarea>
+
+    <div class="modal-buttons">
+      <a id="emailBtn" class="button">Send Email</a>
+      <a id="waBtn" class="button" target="_blank">Send WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<script src="assets/gallery.js"></script>
+</body>
+</html>
